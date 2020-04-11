@@ -46,7 +46,7 @@ public class Products extends HttpServlet {
             out.println("</head>");
             out.println("<body>");
             out.println("<h1>Servlet Products at " + request.getContextPath() + "</h1>");
-            Connection c = DriverManager.getConnection("jdbc:mysql://localhost:3306/grocerystore?zeroDateTimeBehavior=CONVERT_TO_NULL &useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC&allowPublicKeyRetrieval=true&useSSL=false",
+            Connection c = DriverManager.getConnection("jdbc:mysql://localhost:3306/grocerystore?useSSL=false&serverTimeZone=UTC",
                                           "root", "Root1234!");
             Statement s = c.createStatement();
             ResultSet rs;
