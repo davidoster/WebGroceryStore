@@ -44,17 +44,17 @@
             products.add(p1);
             products.add(p2);
             products.add(p3);
-            
-            Connection c = DriverManager.getConnection("jdbc:mysql://localhost:3306/grocerystore?useSSL=false&serverTimezone=UTC",
-                                          "root", "root");
-            Statement s = c.createStatement();
-            ResultSet rs;
-            rs = s.executeQuery("SELECT * FROM grocerystore.products");
-            while(rs.next()) {
-                out.print("Name :" + rs.getString("name"));
-                out.print("\tPrice :" + rs.getString("price"));
-                out.print("<br>");
-            }
+            //Class.forName("com.mysql.cj.jdbc");
+//            Connection c = DriverManager.getConnection("jdbc:mysql://localhost:3306/grocerystore?zeroDateTimeBehavior=CONVERT_TO_NULL &useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC&allowPublicKeyRetrieval=true&useSSL=false",
+//                                          "root", "Root1234!");
+//            Statement s = c.createStatement();
+//            ResultSet rs;
+//            rs = s.executeQuery("SELECT * FROM grocerystore.products");
+//            while(rs.next()) {
+//                out.print("Name :" + rs.getString("name"));
+//                out.print("\tPrice :" + rs.getString("price"));
+//                out.print("<br>");
+//            }
         %>
     </body>
 </html>
