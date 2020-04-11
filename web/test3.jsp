@@ -6,6 +6,8 @@
 
 <%@page import="java.util.List"%>
 <%@page import="models.Product"%>
+<%@page import="models.Vegetable"%>
+<%@page import="models.Potatoe"%>
 <%@page import="java.util.ArrayList"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
