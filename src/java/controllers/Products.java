@@ -46,6 +46,7 @@ public class Products extends HttpServlet {
             out.println("</head>");
             out.println("<body>");
             out.println("<h1>Servlet Products at " + request.getContextPath() + "</h1>");
+            Class.forName("com.mysql.cj.jdbc");
             Connection c = DriverManager.getConnection("jdbc:mysql://localhost:3306/grocerystore?useSSL=false&serverTimezone=UTC",
                                           "root", "Root1234!");
             Statement s = c.createStatement();
@@ -61,6 +62,8 @@ public class Products extends HttpServlet {
             out.println("</body>");
             out.println("</html>");
         } catch (SQLException ex) {
+            Logger.getLogger(Products.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (ClassNotFoundException ex) {
             Logger.getLogger(Products.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
